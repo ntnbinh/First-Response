@@ -1,0 +1,646 @@
+******************************************************************************
+            TI ARM Clang Linker PC v4.0.4                      
+******************************************************************************
+>> Linked Tue May 12 19:35:49 2026
+
+OUTPUT FILE NAME:   <CMPE146FinalProject.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00002415
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  00002940  0001d6c0  R  X
+  SRAM                  20200000   00008000  00000dcd  00007233  RW X
+  BCR_CONFIG            41c00000   000000ff  00000000  000000ff  R   
+  BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00002940   00002940    r-x
+  00000000    00000000    000000c0   000000c0    r-- .intvecs
+  000000c0    000000c0    00002560   00002560    r-x .text
+  00002620    00002620    00000260   00000260    r-- .rodata
+  00002880    00002880    000000c0   000000c0    r-- .cinit
+20200000    20200000    00000bd0   00000000    rw-
+  20200000    20200000    00000800   00000000    rw- .sysmem
+  20200800    20200800    00000201   00000000    rw- .data
+  20200a04    20200a04    000001cc   00000000    rw- .bss
+20207e00    20207e00    00000200   00000000    rw-
+  20207e00    20207e00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c0     
+                  00000000    000000c0     startup_mspm0g350x_ticlang.o (.intvecs)
+
+.text      0    000000c0    00002560     
+                  000000c0    00000868     libc.a : _printfi.c.obj (.text:__TI_printfi_nofloat)
+                  00000928    00000364     Setup.o (.text.wait_state)
+                  00000c8c    000002fc     Setup.o (.text.start_game)
+                  00000f88    0000022c     Setup.o (.text.game_state)
+                  000011b4    00000114     libc.a : memory.c.obj (.text.aligned_alloc)
+                  000012c8    000000f8            : fputs.c.obj (.text.fputs)
+                  000013c0    000000ec     Setup.o (.text.setup1)
+                  000014ac    000000e8     libc.a : memory.c.obj (.text.free)
+                  00001594    000000e0            : setvbuf.c.obj (.text.setvbuf)
+                  00001674    000000dc     Setup.o (.text.send_message)
+                  00001750    000000a2     libclang_rt.builtins.a : udivmoddi4.S.obj (.text)
+                  000017f2    00000002     startup_mspm0g350x_ticlang.o (.text.Default_Handler)
+                  000017f4    0000009c     libc.a : fputc.c.obj (.text.fputc)
+                  00001890    0000009a            : memcpy16.S.obj (.text:memcpy)
+                  0000192a    00000006            : exit.c.obj (.text:abort)
+                  00001930    00000088            : strcmp-armv6m.S.obj (.text:strcmp)
+                  000019b8    0000007c            : fclose.c.obj (.text.__TI_closefile)
+                  00001a34    0000007c            : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00001ab0    0000006c     libsysbm.a : hostlseek.c.obj (.text.HOSTlseek)
+                  00001b1c    0000006c                : hostrename.c.obj (.text.HOSTrename)
+                  00001b88    0000006c     libc.a : fseek.c.obj (.text.fseeko)
+                  00001bf4    0000006c            : getdevice.c.obj (.text.getdevice)
+                  00001c60    0000006c     main.o (.text.main)
+                  00001ccc    00000064     libc.a : _io_perm.c.obj (.text.__TI_wrt_ok)
+                  00001d30    00000064            : memory.c.obj (.text.split)
+                  00001d94    00000062            : memset16.S.obj (.text:memset)
+                  00001df6    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_idiv0)
+                  00001df8    00000060     libsysbm.a : hostopen.c.obj (.text.HOSTopen)
+                  00001e58    0000005c     libc.a : printf.c.obj (.text.printf)
+                  00001eb4    00000058     libsysbm.a : hostread.c.obj (.text.HOSTread)
+                  00001f0c    00000058                : hostwrite.c.obj (.text.HOSTwrite)
+                  00001f64    00000052     libc.a : fflush.c.obj (.text.__TI_doflush)
+                  00001fb6    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_ldiv0)
+                  00001fb8    00000050     libsysbm.a : close.c.obj (.text.close)
+                  00002008    00000048     driverlib.a : dl_uart.o (.text.DL_UART_init)
+                  00002050    00000048     libsysbm.a : hostclose.c.obj (.text.HOSTclose)
+                  00002098    00000048                : hostunlink.c.obj (.text.HOSTunlink)
+                  000020e0    00000040     libclang_rt.builtins.a : aeabi_uidivmod.S.obj (.text.__aeabi_uidivmod)
+                  00002120    00000040     libc.a : atoi.c.obj (.text.atoi)
+                  00002160    0000003c            : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  0000219c    0000003a     libclang_rt.builtins.a : muldsi3.S.obj (.text.__muldsi3)
+                  000021d6    00000002     libc.a : _lock.c.obj (.text._nop)
+                  000021d8    00000038            : rand.c.obj (.text.rand)
+                  00002210    00000034            : fopen.c.obj (.text.__TI_cleanup)
+                  00002244    00000034     libsysbm.a : trgmsg.c.obj (.text.__TI_readmsg)
+                  00002278    00000034                : trgmsg.c.obj (.text.__TI_writemsg)
+                  000022ac    00000034     libc.a : exit.c.obj (.text.exit)
+                  000022e0    00000034            : getdevice.c.obj (.text.finddevice)
+                  00002314    00000030     ti_msp_dl_config.o (.text.SYSCFG_DL_GPIO_init)
+                  00002344    0000002c     ti_msp_dl_config.o (.text.SYSCFG_DL_initPower)
+                  00002370    0000002c     libsysbm.a : unlink.c.obj (.text.unlink)
+                  0000239c    00000028     libc.a : memory.c.obj (.text.free_list_insert)
+                  000023c4    00000028     libsysbm.a : lseek.c.obj (.text.lseek)
+                  000023ec    00000028                : write.c.obj (.text.write)
+                  00002414    00000028     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noargs)
+                  0000243c    00000024     libclang_rt.builtins.a : muldi3.S.obj (.text.__muldi3)
+                  00002460    00000024     libc.a : rand.c.obj (.text.srand)
+                  00002484    00000022            : memccpy.c.obj (.text.memccpy)
+                  000024a6    00000002     --HOLE-- [fill = 0]
+                  000024a8    0000001e     libclang_rt.builtins.a : ashldi3.S.obj (.text.__ashldi3)
+                  000024c6    00000002     --HOLE-- [fill = 0]
+                  000024c8    0000001c     ti_msp_dl_config.o (.text.SYSCFG_DL_SYSCTL_init)
+                  000024e4    0000001c     libc.a : memory.c.obj (.text.free_list_remove)
+                  00002500    00000016            : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00002516    00000002     --HOLE-- [fill = 0]
+                  00002518    00000014     libclang_rt.builtins.a : aeabi_uldivmod.S.obj (.text.__aeabi_uldivmod)
+                  0000252c    00000012     driverlib.a : dl_uart.o (.text.DL_UART_setClockConfig)
+                  0000253e    00000012     libc.a : copy_decompress_none.c.obj (.text:decompress:none)
+                  00002550    00000010     ti_msp_dl_config.o (.text.SYSCFG_DL_init)
+                  00002560    00000010     libc.a : wcslen.c.obj (.text.wcslen)
+                  00002570    0000000e            : memory.c.obj (.text.OUTLINED_FUNCTION_0)
+                  0000257e    00000002     --HOLE-- [fill = 0]
+                  00002580    0000000e     libclang_rt.builtins.a : aeabi_memset.S.obj (.text.__aeabi_memset)
+                  0000258e    0000000e     libsysbm.a : hostrename.c.obj (.text.strcpy)
+                  0000259c    0000000e     libc.a : _printfi.c.obj (.text.strlen)
+                  000025aa    0000000e     libsysbm.a : hostrename.c.obj (.text.strlen)
+                  000025b8    0000000c     libclang_rt.builtins.a : aeabi_memset.S.obj (.text.__aeabi_memclr)
+                  000025c4    0000000c     libc.a : memory.c.obj (.text.malloc)
+                  000025d0    0000000a     driverlib.a : dl_common.o (.text.DL_Common_delayCycles)
+                  000025da    00000002     --HOLE-- [fill = 0]
+                  000025dc    00000008     libc.a : aeabi_portable.c.obj (.text.__aeabi_errno_addr)
+                  000025e4    00000008     libclang_rt.builtins.a : aeabi_memcpy.S.obj (.text.__aeabi_memcpy)
+                  000025ec    00000008     libc.a : printf.c.obj (.text._outc)
+                  000025f4    00000008            : printf.c.obj (.text._outs)
+                  000025fc    00000008            : fseek.c.obj (.text.fseek)
+                  00002604    00000008     libsysbm.a : remove.c.obj (.text.remove)
+                  0000260c    00000004                : hostexit.c.obj (.text.HOSTexit)
+                  00002610    00000004     startup_mspm0g350x_ticlang.o (.text.Reset_Handler)
+                  00002614    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  00002618    00000008     --HOLE-- [fill = 0]
+
+.cinit     0    00002880    000000c0     
+                  00002880    00000097     (.cinit..data.load) [load image, compression = lzss]
+                  00002917    00000001     --HOLE-- [fill = 0]
+                  00002918    0000000c     (__TI_handler_table)
+                  00002924    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  0000292c    00000010     (__TI_cinit_table)
+                  0000293c    00000004     --HOLE-- [fill = 0]
+
+.rodata    0    00002620    00000260     
+                  00002620    00000101     libc.a : aeabi_ctype.S.obj (.rodata:__aeabi_ctype_table_)
+                  00002721    0000005b     Setup.o (.rodata.str1.10108267561400382571.1)
+                  0000277c    00000037     Setup.o (.rodata.str1.9001949646736387360.1)
+                  000027b3    0000002a     Setup.o (.rodata.str1.16382269418599090647.1)
+                  000027dd    00000003     Setup.o (.rodata.str1.13091653946495945604.1)
+                  000027e0    0000001e     main.o (.rodata.str1.10463263676989057200.4)
+                  000027fe    0000001a     Setup.o (.rodata.str1.5083702708080762538.1)
+                  00002818    00000017     Setup.o (.rodata.str1.11768439243039719328.1)
+                  0000282f    00000017     Setup.o (.rodata.str1.16503322860357400160.1)
+                  00002846    00000011     libc.a : _printfi.c.obj (.rodata.str1.10348868589481759720.1)
+                  00002857    00000011            : _printfi.c.obj (.rodata.str1.15363888844622738466.1)
+                  00002868    0000000a     Setup.o (.rodata.setup1.gUART_0Config)
+                  00002872    00000002     Setup.o (.rodata.setup1.gUART_0ClockConfig)
+                  00002874    0000000c     --HOLE-- [fill = 0]
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.binit     0    00000000    00000000     
+
+.sysmem    0    20200000    00000800     UNINITIALIZED
+                  20200000    00000010     libc.a : memory.c.obj (.sysmem)
+                  20200010    000007f0     --HOLE--
+
+.data      0    20200800    00000201     UNINITIALIZED
+                  20200800    000000f0     libc.a : defs.c.obj (.data._ftable)
+                  202008f0    00000078     libsysbm.a : host_device.c.obj (.data._device)
+                  20200968    00000050                : host_device.c.obj (.data._stream)
+                  202009b8    0000002c     main.o (.data.main.something)
+                  202009e4    00000008     libc.a : exit.c.obj (.data..L_MergedGlobals)
+                  202009ec    00000004            : defs.c.obj (.data.__TI_ft_end)
+                  202009f0    00000004            : aeabi_portable.c.obj (.data.__aeabi_errno)
+                  202009f4    00000004            : _lock.c.obj (.data._lock)
+                  202009f8    00000004            : _lock.c.obj (.data._unlock)
+                  202009fc    00000004            : rand.c.obj (.data.next)
+                  20200a00    00000001            : memory.c.obj (.data.memory_is_initialized)
+
+.bss       0    20200a04    000001cc     UNINITIALIZED
+                  20200a04    00000120     libsysbm.a : trgmsg.c.obj (.bss:_CIOBUF_)
+                  20200b24    000000a0     libc.a : defs.c.obj (.bss.__TI_tmpnams)
+                  20200bc4    00000008     libsysbm.a : hostopen.c.obj (.bss.parmbuf)
+                  20200bcc    00000004     libc.a : memory.c.obj (.bss.sys_free)
+
+.stack     0    20207e00    00000200     UNINITIALIZED
+                  20207e00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20207e04    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20200000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20200000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    .\
+       Setup.o                        2644   275       0      
+       main.o                         108    30        44     
+       ti_msp_dl_config.o             136    0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         2888   305       44     
+                                                              
+    .\freertos\ticlang\
+       startup_mspm0g350x_ticlang.o   6      192       0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         6      192       0      
+                                                              
+    C:/ti/mspm0_sdk_2_09_00_01/source/ti/driverlib/lib/ticlang/m0p/mspm0g1x0x_g3x0x/driverlib.a
+       dl_uart.o                      90     0         0      
+       dl_common.o                    10     0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         100    0         0      
+                                                              
+    C:\ti\ccs2020\ccs\tools\compiler\ti-cgt-armllvm_4.0.4.LTS\lib\armv6m-ti-none-eabi/c/libc.a
+       _printfi.c.obj                 2166   34        0      
+       memory.c.obj                   702    0         5      
+       defs.c.obj                     0      0         404    
+       aeabi_ctype.S.obj              0      257       0      
+       fputs.c.obj                    248    0         0      
+       setvbuf.c.obj                  224    0         0      
+       getdevice.c.obj                160    0         0      
+       fputc.c.obj                    156    0         0      
+       memcpy16.S.obj                 154    0         0      
+       strcmp-armv6m.S.obj            136    0         0      
+       copy_decompress_lzss.c.obj     124    0         0      
+       fclose.c.obj                   124    0         0      
+       fseek.c.obj                    116    0         0      
+       printf.c.obj                   108    0         0      
+       _io_perm.c.obj                 100    0         0      
+       memset16.S.obj                 98     0         0      
+       rand.c.obj                     92     0         4      
+       fflush.c.obj                   82     0         0      
+       exit.c.obj                     58     0         8      
+       atoi.c.obj                     64     0         0      
+       autoinit.c.obj                 60     0         0      
+       fopen.c.obj                    52     0         0      
+       boot_cortex_m.c.obj            40     0         0      
+       memccpy.c.obj                  34     0         0      
+       copy_zero_init.c.obj           22     0         0      
+       copy_decompress_none.c.obj     18     0         0      
+       wcslen.c.obj                   16     0         0      
+       aeabi_portable.c.obj           8      0         4      
+       _lock.c.obj                    2      0         8      
+       pre_init.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         5168   291       433    
+                                                              
+    C:\ti\ccs2020\ccs\tools\compiler\ti-cgt-armllvm_4.0.4.LTS\lib\armv6m-ti-none-eabi/c/libsysbm.a
+       trgmsg.c.obj                   104    0         288    
+       host_device.c.obj              0      0         200    
+       hostrename.c.obj               136    0         0      
+       hostlseek.c.obj                108    0         0      
+       hostopen.c.obj                 96     0         8      
+       hostread.c.obj                 88     0         0      
+       hostwrite.c.obj                88     0         0      
+       close.c.obj                    80     0         0      
+       hostclose.c.obj                72     0         0      
+       hostunlink.c.obj               72     0         0      
+       unlink.c.obj                   44     0         0      
+       lseek.c.obj                    40     0         0      
+       write.c.obj                    40     0         0      
+       remove.c.obj                   8      0         0      
+       hostexit.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         980    0         496    
+                                                              
+    C:\ti\ccs2020\ccs\tools\compiler\ti-cgt-armllvm_4.0.4.LTS\lib\armv6m-ti-none-eabi/libclang_rt.builtins.a
+       udivmoddi4.S.obj               162    0         0      
+       aeabi_uidivmod.S.obj           64     0         0      
+       muldsi3.S.obj                  58     0         0      
+       muldi3.S.obj                   36     0         0      
+       ashldi3.S.obj                  30     0         0      
+       aeabi_memset.S.obj             26     0         0      
+       aeabi_uldivmod.S.obj           20     0         0      
+       aeabi_memcpy.S.obj             8      0         0      
+       aeabi_div0.c.obj               4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         408    0         0      
+                                                              
+       Heap:                          0      0         2048   
+       Stack:                         0      0         512    
+       Linker Generated:              0      187       0      
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   9550   975       3533   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0000292c records: 2, size/record: 8, table size: 16
+	.data: load addr=00002880, load size=00000097 bytes, run addr=20200800, run size=00000201 bytes, compression=lzss
+	.bss: load addr=00002924, load size=00000008 bytes, run addr=20200a04, run size=000001cc bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00002918 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+000017f3  ADC0_IRQHandler               
+000017f3  ADC1_IRQHandler               
+000017f3  AES_IRQHandler                
+0000260c  C$$EXIT                       
+000022a5  C$$IO$$                       
+000017f3  CANFD0_IRQHandler             
+000017f3  DAC0_IRQHandler               
+000025d1  DL_Common_delayCycles         
+00002009  DL_UART_init                  
+0000252d  DL_UART_setClockConfig        
+000017f3  DMA_IRQHandler                
+000017f3  Default_Handler               
+000017f3  GROUP0_IRQHandler             
+000017f3  GROUP1_IRQHandler             
+00002051  HOSTclose                     
+0000260d  HOSTexit                      
+00001ab1  HOSTlseek                     
+00001df9  HOSTopen                      
+00001eb5  HOSTread                      
+00001b1d  HOSTrename                    
+00002099  HOSTunlink                    
+00001f0d  HOSTwrite                     
+000017f3  HardFault_Handler             
+000017f3  I2C0_IRQHandler               
+000017f3  I2C1_IRQHandler               
+000017f3  NMI_Handler                   
+000017f3  PendSV_Handler                
+000017f3  RTC_IRQHandler                
+00002611  Reset_Handler                 
+000017f3  SPI0_IRQHandler               
+000017f3  SPI1_IRQHandler               
+000017f3  SVC_Handler                   
+00002315  SYSCFG_DL_GPIO_init           
+000024c9  SYSCFG_DL_SYSCTL_init         
+00002551  SYSCFG_DL_init                
+00002345  SYSCFG_DL_initPower           
+000017f3  SysTick_Handler               
+000017f3  TIMA0_IRQHandler              
+000017f3  TIMA1_IRQHandler              
+000017f3  TIMG0_IRQHandler              
+000017f3  TIMG12_IRQHandler             
+000017f3  TIMG6_IRQHandler              
+000017f3  TIMG7_IRQHandler              
+000017f3  TIMG8_IRQHandler              
+000017f3  UART0_IRQHandler              
+000017f3  UART1_IRQHandler              
+000017f3  UART2_IRQHandler              
+000017f3  UART3_IRQHandler              
+20200a04  _CIOBUF_                      
+20200a04  __CIOBUF_                     
+20208000  __STACK_END                   
+00000200  __STACK_SIZE                  
+00000800  __SYSMEM_SIZE                 
+00000000  __TI_ATRegion0_region_sz      
+00000000  __TI_ATRegion0_src_addr       
+00000000  __TI_ATRegion0_trg_addr       
+00000000  __TI_ATRegion1_region_sz      
+00000000  __TI_ATRegion1_src_addr       
+00000000  __TI_ATRegion1_trg_addr       
+00000000  __TI_ATRegion2_region_sz      
+00000000  __TI_ATRegion2_src_addr       
+00000000  __TI_ATRegion2_trg_addr       
+0000292c  __TI_CINIT_Base               
+0000293c  __TI_CINIT_Limit              
+0000293c  __TI_CINIT_Warm               
+00002918  __TI_Handler_Table_Base       
+00002924  __TI_Handler_Table_Limit      
+00002161  __TI_auto_init_nobinit_nopinit
+00002211  __TI_cleanup                  
+202009e4  __TI_cleanup_ptr              
+000019b9  __TI_closefile                
+00001a35  __TI_decompress_lzss          
+0000253f  __TI_decompress_none          
+00001f65  __TI_doflush                  
+202009e8  __TI_dtors_ptr                
+202009ec  __TI_ft_end                   
+ffffffff  __TI_pprof_out_hndl           
+000000c1  __TI_printfi_nofloat          
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+00002245  __TI_readmsg                  
+00000000  __TI_static_base__            
+20200b24  __TI_tmpnams                  
+00002279  __TI_writemsg                 
+00001ccd  __TI_wrt_ok                   
+00002501  __TI_zero_init_nomemset       
+00002620  __aeabi_ctype_table_          
+00002620  __aeabi_ctype_table_C         
+202009f0  __aeabi_errno                 
+000025dd  __aeabi_errno_addr            
+00001df7  __aeabi_idiv0                 
+00001fb7  __aeabi_ldiv0                 
+000024a9  __aeabi_llsl                  
+0000243d  __aeabi_lmul                  
+000025b9  __aeabi_memclr                
+000025b9  __aeabi_memclr4               
+000025b9  __aeabi_memclr8               
+000025e5  __aeabi_memcpy                
+000025e5  __aeabi_memcpy4               
+000025e5  __aeabi_memcpy8               
+00002581  __aeabi_memset                
+00002581  __aeabi_memset4               
+00002581  __aeabi_memset8               
+000020e1  __aeabi_uidiv                 
+000020e1  __aeabi_uidivmod              
+00002519  __aeabi_uldivmod              
+000024a9  __ashldi3                     
+ffffffff  __binit__                     
+UNDEFED   __mpu_init                    
+0000243d  __muldi3                      
+0000219d  __muldsi3                     
+20207e00  __stack                       
+20200000  __start___llvm_prf_bits       
+20200000  __start___llvm_prf_cnts       
+20200000  __stop___llvm_prf_bits        
+20200000  __stop___llvm_prf_cnts        
+00001751  __udivmoddi4                  
+00002415  _c_int00_noargs               
+202008f0  _device                       
+20200800  _ftable                       
+202009f4  _lock                         
+000021d7  _nop                          
+20200968  _stream                       
+20200000  _sys_memory                   
+UNDEFED   _system_post_cinit            
+00002615  _system_pre_init              
+202009f8  _unlock                       
+0000192b  abort                         
+000011b5  aligned_alloc                 
+00002121  atoi                          
+ffffffff  binit                         
+00001fb9  close                         
+000022ad  exit                          
+000022e1  finddevice                    
+000017f5  fputc                         
+000012c9  fputs                         
+000014ad  free                          
+000025fd  fseek                         
+00001b89  fseeko                        
+00000f89  game_state                    
+00001bf5  getdevice                     
+00000000  interruptVectors              
+000023c5  lseek                         
+00001c61  main                          
+000025c5  malloc                        
+000011b5  memalign                      
+00002485  memccpy                       
+00001891  memcpy                        
+00001d95  memset                        
+20200bc4  parmbuf                       
+00001e59  printf                        
+000021d9  rand                          
+00002605  remove                        
+00001675  send_message                  
+000013c1  setup1                        
+00001595  setvbuf                       
+00002461  srand                         
+00000c8d  start_game                    
+00001931  strcmp                        
+00002371  unlink                        
+00000929  wait_state                    
+00002561  wcslen                        
+000023ed  write                         
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  __TI_ATRegion0_region_sz      
+00000000  __TI_ATRegion0_src_addr       
+00000000  __TI_ATRegion0_trg_addr       
+00000000  __TI_ATRegion1_region_sz      
+00000000  __TI_ATRegion1_src_addr       
+00000000  __TI_ATRegion1_trg_addr       
+00000000  __TI_ATRegion2_region_sz      
+00000000  __TI_ATRegion2_src_addr       
+00000000  __TI_ATRegion2_trg_addr       
+00000000  __TI_static_base__            
+00000000  interruptVectors              
+000000c1  __TI_printfi_nofloat          
+00000200  __STACK_SIZE                  
+00000800  __SYSMEM_SIZE                 
+00000929  wait_state                    
+00000c8d  start_game                    
+00000f89  game_state                    
+000011b5  aligned_alloc                 
+000011b5  memalign                      
+000012c9  fputs                         
+000013c1  setup1                        
+000014ad  free                          
+00001595  setvbuf                       
+00001675  send_message                  
+00001751  __udivmoddi4                  
+000017f3  ADC0_IRQHandler               
+000017f3  ADC1_IRQHandler               
+000017f3  AES_IRQHandler                
+000017f3  CANFD0_IRQHandler             
+000017f3  DAC0_IRQHandler               
+000017f3  DMA_IRQHandler                
+000017f3  Default_Handler               
+000017f3  GROUP0_IRQHandler             
+000017f3  GROUP1_IRQHandler             
+000017f3  HardFault_Handler             
+000017f3  I2C0_IRQHandler               
+000017f3  I2C1_IRQHandler               
+000017f3  NMI_Handler                   
+000017f3  PendSV_Handler                
+000017f3  RTC_IRQHandler                
+000017f3  SPI0_IRQHandler               
+000017f3  SPI1_IRQHandler               
+000017f3  SVC_Handler                   
+000017f3  SysTick_Handler               
+000017f3  TIMA0_IRQHandler              
+000017f3  TIMA1_IRQHandler              
+000017f3  TIMG0_IRQHandler              
+000017f3  TIMG12_IRQHandler             
+000017f3  TIMG6_IRQHandler              
+000017f3  TIMG7_IRQHandler              
+000017f3  TIMG8_IRQHandler              
+000017f3  UART0_IRQHandler              
+000017f3  UART1_IRQHandler              
+000017f3  UART2_IRQHandler              
+000017f3  UART3_IRQHandler              
+000017f5  fputc                         
+00001891  memcpy                        
+0000192b  abort                         
+00001931  strcmp                        
+000019b9  __TI_closefile                
+00001a35  __TI_decompress_lzss          
+00001ab1  HOSTlseek                     
+00001b1d  HOSTrename                    
+00001b89  fseeko                        
+00001bf5  getdevice                     
+00001c61  main                          
+00001ccd  __TI_wrt_ok                   
+00001d95  memset                        
+00001df7  __aeabi_idiv0                 
+00001df9  HOSTopen                      
+00001e59  printf                        
+00001eb5  HOSTread                      
+00001f0d  HOSTwrite                     
+00001f65  __TI_doflush                  
+00001fb7  __aeabi_ldiv0                 
+00001fb9  close                         
+00002009  DL_UART_init                  
+00002051  HOSTclose                     
+00002099  HOSTunlink                    
+000020e1  __aeabi_uidiv                 
+000020e1  __aeabi_uidivmod              
+00002121  atoi                          
+00002161  __TI_auto_init_nobinit_nopinit
+0000219d  __muldsi3                     
+000021d7  _nop                          
+000021d9  rand                          
+00002211  __TI_cleanup                  
+00002245  __TI_readmsg                  
+00002279  __TI_writemsg                 
+000022a5  C$$IO$$                       
+000022ad  exit                          
+000022e1  finddevice                    
+00002315  SYSCFG_DL_GPIO_init           
+00002345  SYSCFG_DL_initPower           
+00002371  unlink                        
+000023c5  lseek                         
+000023ed  write                         
+00002415  _c_int00_noargs               
+0000243d  __aeabi_lmul                  
+0000243d  __muldi3                      
+00002461  srand                         
+00002485  memccpy                       
+000024a9  __aeabi_llsl                  
+000024a9  __ashldi3                     
+000024c9  SYSCFG_DL_SYSCTL_init         
+00002501  __TI_zero_init_nomemset       
+00002519  __aeabi_uldivmod              
+0000252d  DL_UART_setClockConfig        
+0000253f  __TI_decompress_none          
+00002551  SYSCFG_DL_init                
+00002561  wcslen                        
+00002581  __aeabi_memset                
+00002581  __aeabi_memset4               
+00002581  __aeabi_memset8               
+000025b9  __aeabi_memclr                
+000025b9  __aeabi_memclr4               
+000025b9  __aeabi_memclr8               
+000025c5  malloc                        
+000025d1  DL_Common_delayCycles         
+000025dd  __aeabi_errno_addr            
+000025e5  __aeabi_memcpy                
+000025e5  __aeabi_memcpy4               
+000025e5  __aeabi_memcpy8               
+000025fd  fseek                         
+00002605  remove                        
+0000260c  C$$EXIT                       
+0000260d  HOSTexit                      
+00002611  Reset_Handler                 
+00002615  _system_pre_init              
+00002620  __aeabi_ctype_table_          
+00002620  __aeabi_ctype_table_C         
+00002918  __TI_Handler_Table_Base       
+00002924  __TI_Handler_Table_Limit      
+0000292c  __TI_CINIT_Base               
+0000293c  __TI_CINIT_Limit              
+0000293c  __TI_CINIT_Warm               
+20200000  __start___llvm_prf_bits       
+20200000  __start___llvm_prf_cnts       
+20200000  __stop___llvm_prf_bits        
+20200000  __stop___llvm_prf_cnts        
+20200000  _sys_memory                   
+20200800  _ftable                       
+202008f0  _device                       
+20200968  _stream                       
+202009e4  __TI_cleanup_ptr              
+202009e8  __TI_dtors_ptr                
+202009ec  __TI_ft_end                   
+202009f0  __aeabi_errno                 
+202009f4  _lock                         
+202009f8  _unlock                       
+20200a04  _CIOBUF_                      
+20200a04  __CIOBUF_                     
+20200b24  __TI_tmpnams                  
+20200bc4  parmbuf                       
+20207e00  __stack                       
+20208000  __STACK_END                   
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __binit__                     
+ffffffff  binit                         
+UNDEFED   __mpu_init                    
+UNDEFED   _system_post_cinit            
+
+[163 symbols]
